@@ -2,7 +2,7 @@
 
 ## Challenges
 ### Challenge N2:
-[1. Clearnet](https://lembutt.github.io/portfolio/getyourtime.html)
+[1. Clearnet](https://gettime-l1xca6g3guhq.runkit.sh/)
 
 [2. Darknet](http://e6iovxdkmffuu7hoh2jxm7io6nos3aaib6c52qscd5qqvkigxmtoeyqd.onion/) URL: http://e6iovxdkmffuu7hoh2jxm7io6nos3aaib6c52qscd5qqvkigxmtoeyqd.onion/ (available before 17.10.2021)
 
