@@ -7,7 +7,7 @@
 [2. Darknet](http://e6iovxdkmffuu7hoh2jxm7io6nos3aaib6c52qscd5qqvkigxmtoeyqd.onion/) URL: http://e6iovxdkmffuu7hoh2jxm7io6nos3aaib6c52qscd5qqvkigxmtoeyqd.onion/ (available until 17.10.2021)
 
 ## Parser
-1. [Cyberleninka parser](https://github.com/Lembutt/myfirstparser/tree/stable)
+[1. Cyberleninka parser](https://github.com/Lembutt/myfirstparser/tree/stable)
 
 ## Инновационные исследования в вебе. Верстка
 ### 1. 11.09.2021
