@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid CSS</title>
+    <style>
+        .container_temp_cols {
+            grid-template-columns: 1fr 2fr 1fr;
+            display: grid;
+        }
+
+        .container_temp_cols_repeat {
+            grid-template-columns: repeat(8, 2fr 4fr);
+            display: grid;
+        }
+
+        .container_temp_rows {
+            grid-template-rows: 100px 50px 150px;
+        }
+
+        .container_gap {
+            grid-gap: 10px;
+        }
+
+        .container_row_gap {
+            grid-row-gap: 10px;
+        }
+
+        .container_col_gap {
+            grid-column-gap: 10px;
+        }
+
+        .container_auto_rows {
+            grid-auto-rows: 100px;
+        }
+        .container_auto_rows_minmax {
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .ital {
+            font-style: italic;
+        }
+
+        .item {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>GridCSS homework</h1>
+    <h2>Задание шаблона</h2>
+    <h3>grid-template-columns</h3>
+    <p>
+            Через данное свойство шаблон задается с помощью перечисление размеров столбцов.
+        Так, сколько перечислено размеров, столько будет и столбцов. Наиболее удобное указание
+        размеров столбцов осуществляется с помощью т.н. фракций (fr), которые указывают на относительный
+        размер колонок.
+    </p>
+    <div class="container_temp_cols">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+
+    <p>
+        Также размеры колонок можно задать через функцию repeat():<br>
+        <b>grid-template-column: repeat(10, 1fr)</b><br>
+        В примере ниже: grid-template-columns: repeat(8, 2fr 4fr);
+    </p>
+    <div class="container_temp_cols_repeat">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <h3>grid-template-rows</h3>
+    <p>
+        Данное свойство похоже на предыдущее, только через него задаются строки.
+        <br>
+        В примере: grid-template-rows: 100px 50px 150px;
+    </p>
+    <div class="container_temp_cols container_temp_rows">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <h2>Отступы и размерность</h2>
+    <h3>grid-gap, grid-row-gap, grid-column-gap</h3>
+    <p>
+        Данные свойства определяют расстояние между элементами
+    </p>
+    <p>1) Между колонками (grid-column-gap: 10px): </p>
+    <div class="container_temp_cols container_col_gap">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <p>2) Между рядами (grid-row-gap: 10px): </p>
+    <div class="container_temp_cols container_row_gap">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <p>3) Совместно (grid-gap: 10px)</p>
+    <div class="container_temp_cols container_gap">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <h3>grid-auto-rows и minmax()</h3>
+    <p class="ital">
+        Примечание: существует также и grid-auto-columns,
+        но делает данное свойство практически то же самое,
+        в связи с чем рассмотрено не будет.
+    </p>
+    <p>
+        Определяет размер строк, для которых он явно не задан.
+    </p>
+
+    <div class="container_temp_cols container_auto_rows">
+        <div class="item item_1">1</div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <p>
+        В нижеследующем случае необходимо использовать функцию minmax()
+    </p>
+
+    <div class="container_temp_cols container_auto_rows">
+        <div class="item item_1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet, cum deleniti do
+            lore earum eum facilis ipsam, iste laborum maxime modi molestias, necessitatibus nemo odio omnis perspici
+            atis s
+            uscipit ullam. ste laborum maxime modi molestias, necessitatibus nemo odio omnis perspiciatis suscipit ullam.
+        </div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <p>С использованием функции minmax:</p>
+    <div class="container_temp_cols container_auto_rows_minmax">
+        <div class="item item_1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet, cum deleniti do
+            lore earum eum facilis ipsam, iste laborum maxime modi molestias, necessitatibus nemo odio omnis perspici
+            atis s
+            uscipit ullam. ste laborum maxime modi molestias, necessitatibus nemo odio omnis perspiciatis suscipit ullam.
+        </div>
+        <div class="item item_2">2</div>
+        <div class="item item_3">3</div>
+        <div class="item item_4">4</div>
+        <div class="item item_5">5</div>
+        <div class="item item_6">6</div>
+        <div class="item item_7">7</div>
+        <div class="item item_8">8</div>
+        <div class="item item_9">9</div>
+    </div>
+    <h2>Выравнивание</h2>
+
+</body>
+</html>
