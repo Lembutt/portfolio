@@ -18,7 +18,7 @@
 
 ### 2. 29.09.2021
 
-2.1 Bootstrap 4 vs Bootsrap 5
+#### 2.1 Bootstrap 4 vs Bootsrap 5
 
 2.1.1 Собственные SVG иконки ([BS 5](https://lembutt.github.io/portfolio/bs_homework/bstrap5_icons.html))
 
