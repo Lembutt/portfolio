@@ -49,6 +49,6 @@
         <xsl:variable name="ry">
             <xsl:value-of select="@ry"/>
         </xsl:variable>
-            <ellipse id="{$id}" cx="{$cx}" cy="{$cy}" rx="{$rx}" ry="{$ry}" style="fill: {$color}; stroke: {$stroke}; stroke-width: {$stroke-width}; width: 50%; height: 50%" />
+            <ellipse id="{$id}" cx="{$cx}" cy="{$cy}" rx="{$rx}" ry="{$ry}" style="fill: {$color}; stroke: {$stroke}; stroke-width: {$stroke-width}" />
     </xsl:template>
 </xsl:stylesheet>
