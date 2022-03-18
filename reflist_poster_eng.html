@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rounded {
+            counter-reset: li;
+            list-style: none;
+            font: 14px "Trebuchet MS", "Lucida Sans";
+            padding: 0;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+        .rounded a {
+            position: relative;
+            display: block;
+            padding: .4em .4em .4em 2em;
+            margin: .5em 0;
+            background: #DAD2CA;
+            color: #444;
+            text-decoration: none;
+            border-radius: .3em;
+            transition: .3s ease-out;
+        }
+        .rounded a:hover {background: #E9E4E0;}
+        .rounded a:hover:before {transform: rotate(360deg);}
+        .rounded a:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1.3em;
+            top: 50%;
+            margin-top: -1.3em;
+            background: #8FD4C1;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            border: .3em solid white;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2em;
+            transition: all .3s ease-out;
+        }
+        .main_div {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="main_div">
+    <ol class="rounded">
+
+        <li><a href="#">Li W., He M., Haiquan S. An Overview of Blockchain Technology: Applications, Challenges and Future Trends // 2021 IEEE 11th International Conference on Electronics Information and Emergency Communication (ICEIEC). 2021. С. 31-39.
+        </a></li>
+        <li><a href="#">S. Nakamoto. Bitcoin: A Peer-to-Peer Electronic Cash System // bitcoin.org. - [Электронный ресурс]. URL: http://bitcoin.org/bitcoin.pdf, свободный (дата обращения: 28.01.2022).
+        </a></li>
+        <li><a href="#">Zheng Z., Xie S., Dai H., Chen X., Wang H. An Overview of Blockchain Technology: Architecture, Consensus, and Future Trends // 2017 IEEE International Congress on Big Data (BigData Congress). 2017. С. 557-564.
+        </a></li>
+        <li><a href="#">Зейнельгабдин А. Б., Ахметбек Е. Е. БЛОКЧЕЙН В ГОСУДАРСТВЕННОМ УПРАВЛЕНИИ КАЗАХСТАНА // Вопросы государственного и муниципального управления. 2021. №3. URL: https://cyberleninka.ru/article/n/blokcheyn-v-gosudarstvennom-upravlenii-kazahstana (дата обращения: 28.01.2022).
+        </a></li>
+        <li><a href="#">Alam S., Shuaib M., Khan W., Garg S., Kaddoum G., Hossain M., Zikria Y. Blockchain-Based Initiatives: Current State and Challenges // Computer Networks 198 (1). 2021. DOI:10.1016/j.comnet.2021.108395. С. 1-20.
+        </a></li>
+        <li><a href="#">Lykidis I., Drosatos G., Rantos K. The Use of Blockchain Technology in e-Government Services // Computers. 2021. №10 (12) 168. URL: https://doi.org/10.3390/computers10120168 (дата обращения: 28.01.2022).
+        </a></li>
+        <li><a href="#">Sahib R., Al-Shamery E. A Review on Distributed Blockchain Technology for E-Voting // Systems Journal of Physics: Conference Series. 1804 (2021). DOI:10.1088/1742-6596/1804/1/012050. C. 1-23.
+        </a></li>
+        <li><a href="#">Yapicioglu B., Leshinsky R. Blockchain as a Tool for Land Rights: Ownership of Land in Cyprus // Journal of Property, Planning and Environmental Law. 2020. 12 (2). DOI:10.1108/JPPEL-02-2020-0010. С. 171-182.
+        </a></li>
+        <li><a href="#">Humdullah S., Hajar Othman S., Najib Razali M., Kutty Mammi H. Secured Data Storage Framework for Land Registration using Blockchain Technology. 2021. // IJIC. 2021. 11(2). DOI:10.1109/CRC50527.2021.9392434. С. 89-94.
+        </a></li>
+        <li><a href="#">Zaabar B., Cheikhrouhou O., Jamil F., Ammi M., Abid M. HealthBlock: A Secure Blockchain-Based Healthcare Data Management System // Computer Networks 200. 2021. DOI:10.1016/j.comnet.2021.108500.
+            </a></li>
+        <li><a href="#">Wang Q., Qin S. A Hyperledger Fabric-Based System Framework for Healthcare Data Management // Applied Sciences (Switzerland). 11 (24). 2021. DOI:10.3390/app112411693.
+        </a></li>
+        <li><a href="#">Bansod S., Ragha L. Blockchain Technology: Applications and Research Challenges // 2020 International Conference for Emerging Technology (INCET). 2020. DOI:10.1109/INCET49848.2020.9154065.
+        </a></li>
+        <li><a href="#">Chaudhry N., Yousaf M. Consensus Algorithms in Blockchain: Comparative Analysis, Challenges and Opportunities // 2018 12th International Conference on Open Source Systems and Technologies (ICOSST). 2019. DOI:10.1109/ICOSST.2018.8632190.
+        </a></li>
+
+    </ol>
+</div>
+</body>
+</html>
