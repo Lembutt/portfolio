@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plotly-2.9.0.min.js"></script>
+    <script src="../js/random.js"></script>
+    <title>Plotly Tests</title>
+</head>
+<div id="tester" style="width:600px;height:250px;"></div>
+<body>
+    <script>
+        let TEST_VALUE = 1000000;
+
+        // func for data generation
+
+        let TEST_ELEMENT = document.getElementById('tester');
+        let TEST_ARR = ((values2generate) => {
+            Math.seedrandom(values2generate)
+            let x = [];
+            let y = [];
+            for (let index = 0; index < values2generate; index++) {
+                x.push(index);
+                y.push(Math.random());
+            }
+            return [x, y]
+        })(TEST_VALUE);
+        // plot code goes here
+        console.time('test');
+        Plotly.newPlot( 
+            TEST_ELEMENT, 
+            [
+                {
+                    type: 'scattergl',
+                    x: TEST_ARR[0],
+                    y: TEST_ARR[1]
+                }
+            ], 
+            {
+                margin: { t: 0 } 
+            },
+            // {staticPlot: true}
+        );
+        console.timeEnd('test');
+    </script>
+</body>
+</html>

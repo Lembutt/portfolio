@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/random.js"></script>
+    <title>Plotly Tests</title>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:250px;"></div>
+    <script type="text/javascript">
+        let TEST_VALUE = 1000000;
+
+        // func for data generation
+
+        let TEST_ELEMENT = document.getElementById('tester');
+        let TEST_ARR = ((values2generate) => {
+            Math.seedrandom(values2generate)
+            let x = [];
+            let y = [];
+            for (let index = 0; index < values2generate; index++) {
+                x.push(index);
+                y.push(Math.random());
+            }
+            return [x, y]
+        })(TEST_VALUE);
+        // Initialize the echarts instance based on the prepared dom
+        console.time('test')
+        var myChart = echarts.init(document.getElementById('main'));
+  
+        // Specify the configuration items and data for the chart
+        var option = {
+          title: {
+            text: 'ECharts Getting Started Example'
+          },
+          tooltip: {},
+          legend: {
+            data: ['sales']
+          },
+          xAxis: {
+            data: TEST_ARR[0]
+          },
+          animation: false,
+          yAxis: {},
+          series: [
+            {
+              name: 'sales',
+              type: 'line',
+              data: TEST_ARR[1]
+            }
+          ]
+        };
+  
+        // Display the chart using the configuration items and data just specified.
+        myChart.setOption(option);
+        console.timeEnd('test');
+
+      </script>
+</body>
+</html>
